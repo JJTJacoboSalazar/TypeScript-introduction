@@ -1,5 +1,5 @@
-const multiplicator = (a, b, multi) => {
-    console.log(multi, a * b);
+const multiplicator = (a: number, b: number, printText: string) => {
+    console.log(printText, a * b);
 }
 
-multiplicator(2, 3, 'The result of multiplying 2 * 3 is:');
+multiplicator(2, 4, 'Multiplied numbers 2 and 4, the result is:');
