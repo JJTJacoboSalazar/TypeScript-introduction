@@ -23,5 +23,7 @@ const calculator = (a: number, b: number, operator: Operations ): Result => {
     }
 }
 
-const result = calculator(500, 12, 'multiply')
-console.log("Your result is", result)
+// const result = calculator(500, 12, 'multiply')
+// console.log("Your result is", result)
+
+console.log(process.argv);
