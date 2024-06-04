@@ -1,6 +1,9 @@
 // const operations = ['multiply', 'divide', 'add'];
 
-const calculator = (a: number, b: number, operator: 'multiply' | 'add' | 'divide') => {
+export type Operations = 'multiply' | 'add' | 'divide'
+type Result = number
+
+const calculator = (a: number, b: number, operator: Operations ): Result => {
     // if (!operations.includes(operator)) {
     //     console.log("This operation is not supported")
     // }
@@ -9,16 +12,16 @@ const calculator = (a: number, b: number, operator: 'multiply' | 'add' | 'divide
             return a * b;
         case 'divide':
             if (b === 0) {
-                return 'You cannot divide by 0';
+                throw new Error('Cannot divide by 0')
             } else {
                 return a / b;
             }
         case 'add':
             return a + b;
         default:
-            return 'Invalid operator';
+            throw new Error('Operator not defined')
     }
 }
 
-const result = calculator(6, 2, 'multiply')
+const result = calculator(500, 12, 'multiply')
 console.log("Your result is", result)
